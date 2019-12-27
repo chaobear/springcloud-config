@@ -42,4 +42,4 @@ eureka:
       max-active: 8
       max-wait: -1
       max-idle: 8
-      min-idle: 0
+      min-idle: 0    
