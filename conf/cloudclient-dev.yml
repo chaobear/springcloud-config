@@ -1,0 +1,35 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: spring-client
+  datasource:
+    url: jdbc:mysql://rm-bp1f302cx0569n160bo.mysql.rds.aliyuncs.com:3306/nfc_test?useUnicode=true&autoReconnect=true&allowMultiQueries=true&relaxAutoCommit=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: ft_admin
+    password: Hsyl1234!@#$
+    driver-class-name: com.mysql.jdbc.Driver
+    initialSize: 4000
+    minIdle: 1
+    maxActive: 3000
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+    preferIpAddress: true
