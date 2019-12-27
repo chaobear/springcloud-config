@@ -3,6 +3,16 @@ server:
 spring:
   application:
     name: spring-client
+  redis:
+    host: 118.24.176.32
+    port: 6379
+    password: chaofang0408
+    timeout: 30000
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0    
   datasource:
     url: jdbc:mysql://rm-bp1f302cx0569n160bo.mysql.rds.aliyuncs.com:3306/nfc_test?useUnicode=true&autoReconnect=true&allowMultiQueries=true&relaxAutoCommit=true&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: ft_admin
@@ -33,13 +43,4 @@ eureka:
     lease-renewal-interval-in-seconds: 10
     lease-expiration-duration-in-seconds: 30
     preferIpAddress: true
-  redis:
-    host: 118.24.176.32
-    port: 6379
-    password: chaofang0408
-    timeout: 30000
-    pool:
-      max-active: 8
-      max-wait: -1
-      max-idle: 8
-      min-idle: 0    
+    
