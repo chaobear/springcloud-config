@@ -1,8 +1,6 @@
 server:
   port: 6001
 spring:
-  application:
-    name: spring-client
   redis:
     host: 118.24.176.32
     port: 6379
